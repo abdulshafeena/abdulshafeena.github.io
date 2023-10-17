@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:red;text-align: ;">BMI calculator</h1>
+        <form method="post">
+        <label>weight(IN kgs)</label>
+        <input type="text" name="weight"/><br/>
+        <label>height(in m)</label>
+        <input type="text" name="height"/><br/><br/>
+        <button>submit</button>
+        </form>
+        {% if data is defined %}
+        <div>
+            <label>BMI value:</label><br>
+            <h1>{{data['bmi']}}</h1>
+            <label>category</label>
+            <h1>{{data['category']}}</h1>
+        </div>
+        {% endif %}    
+</body>
+</html>
